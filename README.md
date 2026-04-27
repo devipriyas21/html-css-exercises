@@ -11,6 +11,6 @@ This repository contains my HTML and CSS practice files while learning web devel
 - And more...
 
 ## Purpose
-To practice and improve my web development fundamentals.
+To practice and improve my web development fundamentals..
 ..
 ..
