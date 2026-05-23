@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Guess the Number</h2>
+
+<input id="n">
+<button onclick="check()">Check</button>
+
+<p id="a"></p>
+
+<script>
+
+let x = 3;
+
+function check()
+{
+    let y = document.getElementById("n").value;
+
+    if(y == x)
+        document.getElementById("a").innerHTML = "Correct";
+    else
+        document.getElementById("a").innerHTML = "Wrong";
+}
+
+</script>
+
+</body>
+</html>
