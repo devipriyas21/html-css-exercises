@@ -1,1 +1,304 @@
-update
+HTML FRAMES - NOTES
+===================
+
+1. What are Frames?
+-------------------
+Frames were used in older versions of HTML to divide a browser window into
+multiple sections called frames. Each frame could display a different HTML
+document.
+
+NOTE: <frameset> and <frame> are obsolete in HTML5. Modern websites use CSS
+layouts such as Flexbox/Grid. The <iframe> element is still supported for
+embedding another webpage inside the current page.
+
+
+2. <frameset> Element
+---------------------
+The <frameset> element was used instead of <body> to define how the browser
+window should be divided.
+
+It could divide the window:
+- Horizontally using rows
+- Vertically using columns
+
+Example:
+
+<frameset rows="30%,70%">
+    <frame src="top.html">
+    <frame src="bottom.html">
+</frameset>
+
+
+3. Using Rows
+-------------
+The "rows" attribute divides the browser window horizontally.
+
+Example:
+
+<frameset rows="30%,70%">
+    <frame src="header.html">
+    <frame src="content.html">
+</frameset>
+
+Top frame = 30%
+Bottom frame = 70%
+
+
+4. Using Columns
+----------------
+The "cols" attribute divides the browser window vertically.
+
+Example:
+
+<frameset cols="25%,75%">
+    <frame src="menu.html">
+    <frame src="content.html">
+</frameset>
+
+Left frame = 25%
+Right frame = 75%
+
+
+5. <frame> Element
+------------------
+The <frame> element defined an individual frame inside a <frameset>.
+
+The "src" attribute specifies the HTML document displayed in the frame.
+
+Example:
+
+<frame src="home.html">
+
+
+6. Complete Frameset Example
+----------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frames Example</title>
+</head>
+
+<frameset cols="25%,75%">
+    <frame src="menu.html">
+    <frame src="home.html">
+</frameset>
+
+</html>
+
+
+7. Nested Frames
+----------------
+Framesets could be nested to create complex layouts.
+
+Example:
+
+<frameset rows="20%,80%">
+    <frame src="header.html">
+
+    <frameset cols="25%,75%">
+        <frame src="menu.html">
+        <frame src="content.html">
+    </frameset>
+</frameset>
+
+
+8. Common <frame> Attributes
+----------------------------
+src
+---
+Specifies the page displayed in the frame.
+
+name
+----
+Gives a name to a frame. This can be used as a target for links.
+
+scrolling
+---------
+Controls scrollbars.
+
+noresize
+--------
+Prevents the user from resizing a frame.
+
+frameborder
+-----------
+Controls the frame border.
+
+Example:
+
+<frame src="home.html" name="mainFrame" scrolling="yes" noresize>
+
+
+9. Targeting Links in Frames
+----------------------------
+The "target" attribute of <a> could open a linked page inside a particular
+named frame.
+
+Example:
+
+<frameset cols="25%,75%">
+    <frame src="menu.html" name="menu">
+    <frame src="home.html" name="content">
+</frameset>
+
+Link in menu.html:
+
+<a href="about.html" target="content">About Us</a>
+
+
+10. <iframe> Element
+--------------------
+An <iframe> (inline frame) is used to embed another HTML page or external
+content inside the current webpage.
+
+Basic syntax:
+
+<iframe src="page.html"></iframe>
+
+Unlike <frame>, an <iframe> can be placed inside the <body> element.
+
+
+11. Important <iframe> Attributes
+---------------------------------
+src
+---
+Specifies the page or resource to embed.
+
+width
+-----
+Specifies the width of the iframe.
+
+height
+------
+Specifies the height of the iframe.
+
+title
+-----
+Provides an accessible title describing the iframe.
+
+Example:
+
+<iframe
+    src="https://example.com"
+    width="600"
+    height="400"
+    title="Example Website">
+</iframe>
+
+
+12. Complete <iframe> Example
+-----------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline Frame</title>
+</head>
+<body>
+
+<h1>My Website</h1>
+
+<iframe
+    src="page.html"
+    width="600"
+    height="400"
+    title="Embedded Page">
+</iframe>
+
+</body>
+</html>
+
+
+13. Difference Between <frame> and <iframe>
+-------------------------------------------
+
+<frame>
+- Used inside <frameset>.
+- Part of the old frame-based layout system.
+- Obsolete in HTML5.
+- Cannot be used directly inside <body>.
+
+<iframe>
+- Creates an inline frame inside a webpage.
+- Supported in HTML5.
+- Can be placed inside <body>.
+- Used to embed another webpage or content.
+
+
+14. Frames vs Modern HTML
+-------------------------
+Old approach:
+
+<frameset>
+    <frame>
+    <frame>
+</frameset>
+
+Modern approach:
+
+<body>
+    <div>Content</div>
+    <iframe src="page.html"></iframe>
+</body>
+
+For modern page layouts, use:
+- CSS Flexbox
+- CSS Grid
+- Semantic HTML
+- Responsive design
+
+
+15. Advantages of Frames
+------------------------
+Historically, frames had these advantages:
+
+1. Different pages could be displayed in different sections.
+2. Navigation menus could remain visible while content changed.
+3. Separate HTML documents could be loaded into different frames.
+4. Only a particular frame needed to change when navigating.
+
+
+16. Disadvantages of Frames
+---------------------------
+1. <frameset> and <frame> are obsolete in HTML5.
+2. They can cause accessibility problems.
+3. Bookmarking and navigation can be difficult.
+4. Search engine indexing can be problematic.
+5. Responsive design is difficult.
+6. Browser history and URLs can behave unexpectedly.
+7. Managing multiple documents can become complicated.
+
+
+17. Important Points to Remember
+--------------------------------
+1. <frameset> was used to divide a browser window into frames.
+2. "rows" creates horizontal divisions.
+3. "cols" creates vertical divisions.
+4. <frame> displays an HTML document inside a frame.
+5. "src" specifies the document displayed in a frame.
+6. <frameset> and <frame> are obsolete in HTML5.
+7. <iframe> is the modern element for embedding another webpage.
+8. Use CSS Grid or Flexbox for modern page layouts.
+9. The "target" attribute can open links in a named browsing context.
+
+
+18. Quick Revision
+------------------
+
+<frameset rows="50%,50%">
+    <frame src="top.html">
+    <frame src="bottom.html">
+</frameset>
+
+Horizontal division = rows
+Vertical division   = cols
+
+Old frame system:
+<frameset> + <frame>
+
+Modern inline frame:
+<iframe src="page.html"></iframe>
+
+Modern page layout:
+CSS Grid / Flexbox
