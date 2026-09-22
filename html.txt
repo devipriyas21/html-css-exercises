@@ -1,1 +1,471 @@
-update
+HTML - COMPLETE NOTES
+=====================
+
+1. What is HTML?
+----------------
+HTML stands for HyperText Markup Language. It is the standard markup language used to create and structure webpages.
+
+HTML is used to:
+- Create webpage structure
+- Add headings and paragraphs
+- Add links, images, lists and tables
+- Create forms
+- Embed audio and video
+- Organize content
+
+HTML is NOT a programming language. It is a markup language.
+
+2. Basic HTML Structure
+-----------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This is my webpage.</p>
+</body>
+</html>
+
+<!DOCTYPE html> = Declares HTML5.
+<html> = Root element.
+<head> = Contains metadata and resources.
+<title> = Browser tab title.
+<body> = Visible webpage content.
+
+3. HTML Tags and Elements
+-------------------------
+Example:
+<p>Hello World</p>
+
+<p> is the opening tag and </p> is the closing tag. Together with the content they form an HTML element.
+
+Some elements are void/empty elements and do not have closing tags, such as <br>, <img> and <hr>.
+
+4. HTML Attributes
+------------------
+Attributes provide additional information about elements.
+
+Example:
+<a href="https://example.com">Visit Website</a>
+
+Common attributes:
+id, class, style, title, href, src, alt, width, height, name, value
+
+5. Headings
+-----------
+<h1>Main Heading</h1>
+<h2>Sub Heading</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<h1> is the highest-level heading and <h6> is the lowest.
+
+6. Paragraphs and Line Breaks
+-----------------------------
+<p>This is a paragraph.</p>
+
+<br> creates a line break.
+<hr> creates a thematic horizontal rule.
+
+Example:
+Hello<br>World
+
+7. Text Formatting
+------------------
+<b>Bold</b>
+<strong>Important text</strong>
+<i>Italic</i>
+<em>Emphasized text</em>
+<u>Underlined</u>
+<mark>Highlighted</mark>
+<small>Small text</small>
+<del>Deleted</del>
+<ins>Inserted</ins>
+<sub>Subscript</sub>
+<sup>Superscript</sup>
+
+Example: H<sub>2</sub>O and x<sup>2</sup>
+
+8. Comments
+-----------
+Comments are not displayed on the webpage.
+
+<!-- This is a comment -->
+
+9. Links
+---------
+The <a> element creates hyperlinks.
+
+<a href="https://example.com">Visit Website</a>
+
+Important attributes:
+href = destination
+ target = where the link opens
+
+Example:
+<a href="page.html" target="_blank">Open Page</a>
+
+10. Images
+----------
+The <img> element displays images.
+
+<img src="photo.jpg" alt="My Photo">
+
+src = image location
+alt = alternative text
+width = image width
+height = image height
+
+11. Lists
+---------
+Unordered list:
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+Ordered list:
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+
+Description list:
+<dl>
+    <dt>HTML</dt>
+    <dd>Markup language for webpages.</dd>
+</dl>
+
+12. Tables
+----------
+Important elements:
+<table> = table
+<tr> = row
+<th> = header cell
+<td> = data cell
+
+Example:
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>20</td>
+    </tr>
+</table>
+
+<caption> can provide a table title.
+colspan allows a cell to span columns.
+rowspan allows a cell to span rows.
+
+13. Forms
+----------
+Forms collect user information.
+
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Submit">
+</form>
+
+Common form elements:
+input, label, textarea, select, option, button, fieldset, legend
+
+14. Common Input Types
+----------------------
+text, password, email, number, date, time, radio, checkbox, file, tel, url, search, submit, reset
+
+Examples:
+<input type="text">
+<input type="email">
+<input type="password">
+<input type="number">
+<input type="date">
+<input type="radio">
+<input type="checkbox">
+
+15. Important Form Attributes
+-----------------------------
+required = makes a field mandatory
+placeholder = displays a hint
+name = identifies submitted form data
+id = uniquely identifies an element
+value = specifies a control's value
+
+Example:
+<input type="text" placeholder="Enter your name" required>
+
+16. Radio Buttons and Checkboxes
+--------------------------------
+Radio buttons allow one choice from a group:
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+Checkboxes allow multiple choices:
+<input type="checkbox" name="skill" value="html"> HTML
+<input type="checkbox" name="skill" value="css"> CSS
+
+17. Textarea and Select
+-----------------------
+<textarea name="message" rows="5" cols="30"></textarea>
+
+<select name="course">
+    <option value="cse">Computer Science</option>
+    <option value="ds">Data Science</option>
+</select>
+
+18. Frames and Iframes
+----------------------
+Old HTML used <frameset> and <frame> to divide a browser window. These are obsolete in HTML5.
+
+<iframe> is still supported and embeds another webpage inside the current page.
+
+Example:
+<iframe src="page.html" width="600" height="400" title="Embedded Page"></iframe>
+
+19. div and span
+----------------
+<div> is a block-level container used to group content.
+<span> is an inline container used to group or style part of text.
+
+Example:
+<div><h2>Student Details</h2><p>Student information.</p></div>
+<p>This is <span>important</span> text.</p>
+
+20. Block and Inline Elements
+-----------------------------
+Block-level examples: div, p, h1-h6, section, article, header, footer.
+Inline examples: span, a, strong, em, img.
+
+21. Semantic HTML
+-----------------
+Semantic elements clearly describe their purpose.
+
+<header> = page/section header
+<nav> = navigation links
+<main> = main content
+<section> = section of content
+<article> = independent content
+<aside> = related/sidebar content
+<footer> = footer
+
+22. Multimedia
+--------------
+Audio:
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+Video:
+<video controls width="500">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+23. Meta Tags
+-------------
+Character encoding:
+<meta charset="UTF-8">
+
+Responsive viewport:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+24. Linking CSS
+---------------
+External CSS:
+<link rel="stylesheet" href="style.css">
+
+Internal CSS:
+<style>
+    p { color: blue; }
+</style>
+
+Inline CSS:
+<p style="color: blue;">Hello</p>
+
+25. JavaScript in HTML
+----------------------
+<script>
+    alert("Hello World!");
+</script>
+
+External JavaScript:
+<script src="script.js"></script>
+
+26. HTML Entities
+-----------------
+&lt; = <
+&gt; = >
+&amp; = &
+&quot; = "
+&nbsp; = non-breaking space
+
+27. File Paths
+-------------
+Relative path:
+<img src="images/photo.jpg">
+
+Absolute URL:
+<img src="https://example.com/photo.jpg">
+
+28. Accessibility
+-----------------
+Good practices include:
+- Use meaningful alt text for images.
+- Use <label> with form controls.
+- Use semantic HTML.
+- Use headings logically.
+- Give iframes a descriptive title.
+- Use descriptive link text.
+
+29. HTML5 Features
+------------------
+HTML5 introduced useful semantic and multimedia elements, including:
+<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>, <audio>, <video>, <canvas> and improved form controls.
+
+30. Canvas and SVG
+------------------
+Canvas provides a drawing area controlled by JavaScript:
+<canvas id="myCanvas" width="300" height="150"></canvas>
+
+SVG means Scalable Vector Graphics and is used for vector graphics:
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" />
+</svg>
+
+31. HTML Best Practices
+-----------------------
+1. Always use <!DOCTYPE html>.
+2. Use consistent lowercase tags.
+3. Use meaningful structure.
+4. Provide alt text for meaningful images.
+5. Use labels for form controls.
+6. Prefer semantic HTML.
+7. Keep HTML, CSS and JavaScript organized.
+8. Use proper indentation.
+9. Close non-void elements correctly.
+10. Write accessible HTML.
+
+32. Complete Simple Example
+---------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <header><h1>Welcome to My Website</h1></header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>This is my first HTML webpage.</p>
+            <img src="photo.jpg" alt="Sample photo" width="300">
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer><p>Copyright 2026</p></footer>
+</body>
+</html>
+
+33. Quick Revision
+------------------
+HTML = HyperText Markup Language
+<!DOCTYPE html> = HTML5 declaration
+<html> = root element
+<head> = metadata/resources
+<title> = browser tab title
+<body> = visible content
+<h1>-<h6> = headings
+<p> = paragraph
+<a> = hyperlink
+<img> = image
+<ul> = unordered list
+<ol> = ordered list
+<li> = list item
+<table> = table
+<tr> = row
+<th> = header
+<td> = data cell
+<form> = form
+<input> = input control
+<textarea> = multi-line input
+<select> = dropdown
+<button> = button
+<div> = block container
+<span> = inline container
+<header>, <nav>, <main>, <section>, <article>, <aside>, <footer> = semantic elements
+<iframe> = embedded browsing context
+<audio> = audio
+<video> = video
+<canvas> = drawing area
+
+34. Important Differences
+--------------------------
+HTML vs CSS:
+HTML = structure
+CSS = styling
+
+HTML vs JavaScript:
+HTML = structure
+JavaScript = behaviour and interactivity
+
+<div> vs <span>:
+<div> = block-level container
+<span> = inline container
+
+<ul> vs <ol>:
+<ul> = unordered/bulleted list
+<ol> = ordered/numbered list
+
+id vs class:
+id = identifies a specific element
+class = groups elements for styling or scripting
+
+35. Final Key Points
+--------------------
+1. HTML is a markup language used to structure webpages.
+2. HTML5 is the modern version of HTML.
+3. Use <!DOCTYPE html> at the beginning of an HTML document.
+4. <html> is the root element.
+5. <head> contains metadata and resources.
+6. <body> contains visible webpage content.
+7. Attributes provide additional information about elements.
+8. Semantic HTML improves structure and accessibility.
+9. Forms collect user input.
+10. <iframe> embeds another webpage.
+11. CSS handles styling.
+12. JavaScript adds behaviour and interactivity.
